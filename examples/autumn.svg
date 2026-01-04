@@ -1,0 +1,23 @@
+﻿<svg
+    xmlns="http://www.w3.org/2000/svg" width="144.0" height="20" role="img" aria-label="🍁 powered by: autumn">
+    <title>🍁 powered by: autumn</title>
+    <linearGradient id="s" x2="0" y2="100%">
+        <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+        <stop offset="1" stop-opacity=".1"/>
+    </linearGradient>
+    <clipPath id="r">
+        <rect width="144.0" height="20" rx="3" fill="#fff"/>
+    </clipPath>
+    <g clip-path="url(#r)">
+        <rect fill="#000" width="90.0" height="20"/>
+        <rect fill="#D93D1F" x="90.0" width="54.0" height="20"/>
+        <rect fill="url(#s)" width="144.0" height="20"/>
+    </g>
+    <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
+        <image x="5" y="3" width="14" height="14" href=""/>
+        <text aria-hidden="true" x="450" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="800">🍁 powered by</text>
+        <text x="450" y="140" fill="#fff" transform="scale(.1)" textLength="800">🍁 powered by</text>
+        <text aria-hidden="true" x="1170" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="440">autumn</text>
+        <text x="1170" y="140" fill="#fff" transform="scale(.1)" textLength="440">autumn</text>
+    </g>
+</svg>

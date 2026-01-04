@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="137.8" height="20">
+    <linearGradient id="b" x2="0" y2="100%">
+        <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+        <stop offset="1" stop-opacity=".1"/>
+    </linearGradient>
+    <mask id="r">
+        <rect width="137.8" height="20" rx="10" fill="#fff"/>
+    </mask>
+    <g mask="url(#r)">
+        <rect fill="#c1115d" x="0" y="0" width="137.8" height="20"/>
+        <rect fill="#262626" x="71.3" y="2" width="56.5" height="16"/>
+        <rect fill="#262626" x="120.8" y="2" width="15" height="16" rx="10"/>
+        <rect fill="url(#b)" x="0" y="0" width="137.8" height="20"/>
+    </g>
+    <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="110">
+        <text x="357" y="140" transform="scale(.1)" textLength="561">Заголовок</text>
+    </g>
+    <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="110">
+        <text x="1036" y="140" transform="scale(.1)" textLength="513">Значение</text>
+    </g>
+</svg>

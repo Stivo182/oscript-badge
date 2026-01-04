@@ -1,0 +1,13 @@
+﻿<svg
+	xmlns="http://www.w3.org/2000/svg" width="133" height="20" role="img" aria-label="Заголовок: Значение">
+	<title>Заголовок: Значение</title>
+	<g shape-rendering="crispEdges">
+		<rect width="69" height="20" fill="#555"/>
+		<rect x="69" width="64" height="20" fill="#007ec6"/>
+	</g>
+	<g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
+		<image x="5" y="3" width="14" height="14" href=""/>
+		<text x="345" y="140" transform="scale(.1)" fill="#fff" textLength="590">Заголовок</text>
+		<text x="1010" y="140" transform="scale(.1)" fill="#fff" textLength="540">Значение</text>
+	</g>
+</svg>

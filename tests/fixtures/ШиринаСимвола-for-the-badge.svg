@@ -1,0 +1,13 @@
+﻿<svg
+	xmlns="http://www.w3.org/2000/svg" width="293.0" height="28" role="img" aria-label="LABEL: VALUE">
+	<title>LABEL: VALUE</title>
+	<g shape-rendering="crispEdges">
+		<rect width="116.0" height="28" fill="#555"/>
+		<rect x="116.0" width="177.0" height="28" fill="#007ec6"/>
+	</g>
+	<g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+		<image x="9" y="7" width="14" height="14" href=""/>
+		<text transform="scale(.1)" x="580" y="175" fill="#fff" textLength="760">LABEL</text>
+		<text transform="scale(.1)" x="2045" y="175" fill="#fff" textLength="1170" font-weight="bold">VALUE</text>
+	</g>
+</svg>

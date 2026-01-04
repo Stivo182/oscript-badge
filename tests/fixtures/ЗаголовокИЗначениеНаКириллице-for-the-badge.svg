@@ -1,0 +1,13 @@
+﻿<svg
+	xmlns="http://www.w3.org/2000/svg" width="185.6" height="28" role="img" aria-label="ЗАГОЛОВОК: ЗНАЧЕНИЕ">
+	<title>ЗАГОЛОВОК: ЗНАЧЕНИЕ</title>
+	<g shape-rendering="crispEdges">
+		<rect width="92.0" height="28" fill="#555"/>
+		<rect x="92.0" width="93.6" height="28" fill="#007ec6"/>
+	</g>
+	<g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+		<image x="9" y="7" width="14" height="14" href=""/>
+		<text transform="scale(.1)" x="460" y="175" fill="#fff" textLength="720">ЗАГОЛОВОК</text>
+		<text transform="scale(.1)" x="1388" y="175" fill="#fff" textLength="696" font-weight="bold">ЗНАЧЕНИЕ</text>
+	</g>
+</svg>
