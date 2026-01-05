@@ -1,23 +1,23 @@
 ﻿<svg
-    xmlns="http://www.w3.org/2000/svg" width="46" height="20" role="img" aria-label="v2.0.0">
+    xmlns="http://www.w3.org/2000/svg" width="45" height="20" role="img" aria-label="v2.0.0">
     <title>v2.0.0</title>
     <linearGradient id="s" x2="0" y2="100%">
         <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
         <stop offset="1" stop-opacity=".1"/>
     </linearGradient>
     <clipPath id="r">
-        <rect width="46" height="20" rx="3" fill="#fff"/>
+        <rect width="45" height="20" rx="3" fill="#fff"/>
     </clipPath>
     <g clip-path="url(#r)">
         <rect fill="#555" width="" height="20"/>
-        <rect fill="#007ec6" x="" width="46" height="20"/>
-        <rect fill="url(#s)" width="46" height="20"/>
+        <rect fill="#007ec6" x="" width="45" height="20"/>
+        <rect fill="url(#s)" width="45" height="20"/>
     </g>
     <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
         <image x="5" y="3" width="14" height="14" href=""/>
         <text aria-hidden="true" x="" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength=""></text>
         <text x="" y="140" fill="#fff" transform="scale(.1)" textLength=""></text>
-        <text aria-hidden="true" x="230" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="360">v2.0.0</text>
-        <text x="230" y="140" fill="#fff" transform="scale(.1)" textLength="360">v2.0.0</text>
+        <text aria-hidden="true" x="225" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="350">v2.0.0</text>
+        <text x="225" y="140" fill="#fff" transform="scale(.1)" textLength="350">v2.0.0</text>
     </g>
 </svg>

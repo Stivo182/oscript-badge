@@ -6,8 +6,8 @@
 		<rect x="{{ ПозицияРазделения }}" width="{{ ШиринаЗначения }}" height="28" fill="{{ ЦветФонаЗначения }}"/>
 	</g>
 	<g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="{{ РазмерШрифта }}">
-		<image x="9" y="7" width="14" height="14" href="{{ Логотип }}"/>
-		<text transform="scale(.1)" x="{{ ПозицияЗаголовка }}" y="175" fill="{{ ЦветТекстаЗаголовка }}" textLength="{{ ДлинаТекстаЗаголовка }}">{{ Заголовок }}</text>
-		<text transform="scale(.1)" x="{{ ПозицияЗначения }}" y="175" fill="{{ ЦветТекстаЗначения }}" textLength="{{ ДлинаТекстаЗначения }}" font-weight="bold">{{ Значение }}</text>
+		<image x="{{ ОтступЛоготипа }}" y="7" width="{{ ШиринаЛоготипа }}" height="14" href="{{ Логотип }}"/>
+		<text transform="scale(.1)" x="{{ ПозицияЗаголовка }}" y="175" fill="{{ ЦветТекстаЗаголовка }}" textLength="{{ ШиринаТекстаЗаголовка }}">{{ Заголовок }}</text>
+		<text transform="scale(.1)" x="{{ ПозицияЗначения }}" y="175" fill="{{ ЦветТекстаЗначения }}" textLength="{{ ШиринаТекстаЗначения }}" font-weight="bold">{{ Значение }}</text>
 	</g>
 </svg>

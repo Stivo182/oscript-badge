@@ -1,0 +1,13 @@
+﻿<svg
+	xmlns="http://www.w3.org/2000/svg" width="189.2" height="28" role="img" aria-label="MADE WITH: ONESCRIPT">
+	<title>MADE WITH: ONESCRIPT</title>
+	<g shape-rendering="crispEdges">
+		<rect width="86.0" height="28" fill="#555"/>
+		<rect x="86.0" width="103.2" height="28" fill="#4F90D6"/>
+	</g>
+	<g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+		<image x="9" y="7" width="14" height="14" href=""/>
+		<text transform="scale(.1)" x="430" y="175" fill="#fff" textLength="660">MADE WITH</text>
+		<text transform="scale(.1)" x="1376" y="175" fill="#fff" textLength="792" font-weight="bold">ONESCRIPT</text>
+	</g>
+</svg>

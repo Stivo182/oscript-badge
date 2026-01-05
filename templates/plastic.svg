@@ -1,0 +1,25 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg" width="{{ Ширина }}" height="18" role="img" aria-label="{{ Подсказка }}">
+    <title>{{ Подсказка }}</title>
+    <linearGradient id="s" x2="0" y2="100%">
+        <stop offset="0" stop-color="#fff" stop-opacity=".7"/>
+        <stop offset=".1" stop-color="#aaa" stop-opacity=".1"/>
+        <stop offset=".9" stop-color="#000" stop-opacity=".3"/>
+        <stop offset="1" stop-color="#000" stop-opacity=".5"/>
+    </linearGradient>
+    <clipPath id="r">
+        <rect width="{{ Ширина }}" height="18" rx="4" fill="#fff"/>
+    </clipPath>
+    <g clip-path="url(#r)">
+        <rect width="{{ ПозицияРазделения }}" height="18" fill="{{ ЦветФонаЗаголовка }}"/>
+        <rect x="{{ ПозицияРазделения }}" width="{{ ШиринаЗначения }}" height="18" fill="{{ ЦветФонаЗначения }}"/>
+        <rect width="{{ Ширина }}" height="18" fill="url(#s)"/>
+    </g>
+    <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="{{ РазмерШрифта }}">
+        <image x="{{ ОтступЛоготипа }}" y="2" width="{{ ШиринаЛоготипа }}" height="14" href="{{ Логотип }}"/>
+        <text aria-hidden="true" x="{{ ПозицияЗаголовка }}" y="140" fill="{{ ЦветТениЗаголовка }}" fill-opacity=".3" transform="scale(.1)" textLength="{{ ШиринаТекстаЗаголовка }}">{{ Заголовок }}</text>
+        <text x="{{ ПозицияЗаголовка }}" y="130" transform="scale(.1)" fill="{{ ЦветТекстаЗаголовка }}" textLength="{{ ШиринаТекстаЗаголовка }}">{{ Заголовок }}</text>
+        <text aria-hidden="true" x="{{ ПозицияЗначения }}" y="140" fill="{{ ЦветТениЗначения }}" fill-opacity=".3" transform="scale(.1)" textLength="{{ ШиринаТекстаЗначения }}">{{ Значение }}</text>
+        <text x="{{ ПозицияЗначения }}" y="130" transform="scale(.1)" fill="{{ ЦветТекстаЗначения }}" textLength="{{ ШиринаТекстаЗначения }}">{{ Значение }}</text>
+    </g>
+</svg>

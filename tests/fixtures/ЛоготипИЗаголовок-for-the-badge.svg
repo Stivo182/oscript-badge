@@ -1,13 +1,13 @@
 ﻿<svg
-	xmlns="http://www.w3.org/2000/svg" width="81" height="28" role="img" aria-label="LABEL">
+	xmlns="http://www.w3.org/2000/svg" width="77" height="28" role="img" aria-label="LABEL">
 	<title>LABEL</title>
 	<g shape-rendering="crispEdges">
-		<rect width="81" height="28" fill="#555"/>
-		<rect x="81" width="" height="28" fill="#007ec6"/>
+		<rect width="77" height="28" fill="#555"/>
+		<rect x="77" width="" height="28" fill="#007ec6"/>
 	</g>
 	<g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
 		<image x="9" y="7" width="14" height="14" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTY4MDAgMTY4MDAiIGFyaWEtaGlkZGVuPSJ0cnVlIiByb2xlPSJpbWciPjxnIGZpbGw9IiM1MTk2RDkiPg0KICA8Y2lyY2xlIGN4PSI4MjI5IiBjeT0iODIyOSIgcj0iODIyOSIvPg0KICA8cGF0aCBmaWxsPSIjRkVGRUZFIiBkPSJNNzg4NCA5ODIzbDAgNjQ1LTI1MDQtMTg3NSA0NDUtMzE3IDIwNTkgMTU0NnptMCAxMjg3bDAgNjUzLTMzNzctMjUzNCA0MzYtMzE3IDI5NDAgMjE5N3ptMCAxMzA0bDAgNjQ1LTQyMTUtMzE2MSA0MDYtMzQyIDM4MDkgMjg1OXptMC05NDA0bDAgNjQ1LTUzOTYgNDA1NCAwLTY0NSA1Mzk2LTQwNTR6bTAtMTI5NWwwIDY1My01Mzk2IDQwNDYgMC02NDUgNTM5Ni00MDU0em0wIDI1OTRsMCA2NTEtNTM5NiA0MDQ2IDAtNjQ1IDUzOTYtNDA1MnptMCAxMjk1bDAgNjQyLTQ5NjkgMzcyOSA0OTY5IDM3MjYgMCA2NDUtNTM5Ni00MDQ2IDAtNjUxIDUzOTYtNDA0NnptNjkxIDQ4NTZsMC02NDUgNDk2OS0zNzI2LTQ5NjktMzcyOSAwLTY0NSA1Mzk2IDQwNDYgMCA2NTMtNTM5NiA0MDQ2em0wIDEyOTVsMC02NTMgNTM5Ni00MDQ2IDAgNjQ1LTUzOTYgNDA1NHptMCAyNTkxbDAtNjUzIDUzOTYtNDA0MyAwIDY0Mi01Mzk2IDQwNTR6bTAtMTI5NWwwLTY0NSA1Mzk2LTQwNTQgMCA2NDUtNTM5NiA0MDU0em0wLTk0MDRsMC02NDUgNDIxNSAzMTYxLTQwNSAzNDItMzgxMC0yODU5em0wIDEzMDRsMC02NTEgMzM3OCAyNTMxLTQzNiAzMjAtMjk0Mi0yMjAwem0wIDEyODdsMC02NDIgMjUwNCAxODcyLTQ0NCAzMTctMjA2MC0xNTQ2eiIvPg0KPC9nPjwvc3ZnPg=="/>
-		<text transform="scale(.1)" x="520" y="175" fill="#fff" textLength="380">LABEL</text>
-		<text transform="scale(.1)" x="810" y="175" fill="#fff" textLength="" font-weight="bold"></text>
+		<text transform="scale(.1)" x="500" y="175" fill="#fff" textLength="340">LABEL</text>
+		<text transform="scale(.1)" x="770" y="175" fill="#fff" textLength="" font-weight="bold"></text>
 	</g>
 </svg>

@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="438.0" height="20">
+<svg xmlns="http://www.w3.org/2000/svg" width="434.2" height="20">
     <linearGradient id="b" x2="0" y2="100%">
         <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
         <stop offset="1" stop-opacity=".1"/>
     </linearGradient>
     <mask id="r">
-        <rect width="438.0" height="20" rx="10" fill="#fff"/>
+        <rect width="434.2" height="20" rx="10" fill="#fff"/>
     </mask>
     <g mask="url(#r)">
-        <rect fill="#c1115d" x="0" y="0" width="438.0" height="20"/>
-        <rect fill="#262626" x="217.6" y="2" width="210.4" height="16"/>
-        <rect fill="#262626" x="421.0" y="2" width="15" height="16" rx="10"/>
-        <rect fill="url(#b)" x="0" y="0" width="438.0" height="20"/>
+        <rect fill="#c1115d" x="0" y="0" width="434.2" height="20"/>
+        <rect fill="#262626" x="215.7" y="2" width="208.5" height="16"/>
+        <rect fill="#262626" x="417.2" y="2" width="15" height="16" rx="10"/>
+        <rect fill="url(#b)" x="0" y="0" width="434.2" height="20"/>
     </g>
     <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="110">
-        <text x="1088" y="140" transform="scale(.1)" textLength="276">label</text>
+        <text x="1079" y="140" transform="scale(.1)" textLength="257">label</text>
     </g>
     <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="110">
-        <text x="3268" y="140" transform="scale(.1)" textLength="304">value</text>
+        <text x="3240" y="140" transform="scale(.1)" textLength="285">value</text>
     </g>
 </svg>

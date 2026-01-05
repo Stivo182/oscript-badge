@@ -23,14 +23,14 @@
     <image x="5" y="3" width="14" height="14" href="{{ Логотип }}"/>
     <g aria-hidden="false" fill="#333" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" text-rendering="geometricPrecision" font-weight="700" font-size="{{ РазмерШрифта }}" line-height="14px">
         <a target="_blank" href="{{ СсылкаЗаголовка }}">
-            <text aria-hidden="true" x="{{ ПозицияЗаголовка }}" y="150" fill="#fff" transform="scale(.1)" textLength="{{ ДлинаТекстаЗаголовка }}">{{ Заголовок }}</text>
-            <text x="{{ ПозицияЗаголовка }}" y="140" transform="scale(.1)" textLength="{{ ДлинаТекстаЗаголовка }}">{{ Заголовок }}</text>
+            <text aria-hidden="true" x="{{ ПозицияЗаголовка }}" y="150" fill="#fff" transform="scale(.1)" textLength="{{ ШиринаТекстаЗаголовка }}">{{ Заголовок }}</text>
+            <text x="{{ ПозицияЗаголовка }}" y="140" transform="scale(.1)" textLength="{{ ШиринаТекстаЗаголовка }}">{{ Заголовок }}</text>
             <rect id="llink" stroke="#d5d5d5" fill="url(#a)" x=".5" y=".5" width="{{ Макс(ШиринаОбластиЛоготипа + ШиринаЗаголовка - 1, 0) }}" height="19" rx="2"/>
         </a>
         <a target="_blank" href="{{ СсылкаЗначения }}">
             <rect width="{{ ПозицияРазделения + 1 }}" x="{{ ПозицияРазделения + 6 }}" height="20" fill="rgba(0,0,0,0)"/>
-            <text aria-hidden="true" x="{{ ПозицияЗначения }}" y="150" fill="#fff" transform="scale(.1)" textLength="{{ ДлинаТекстаЗначения }}">{{ Значение }}</text>
-            <text id="rlink" x="{{ ПозицияЗначения }}" y="140" transform="scale(.1)" textLength="{{ ДлинаТекстаЗначения }}">{{ Значение }}</text>
+            <text aria-hidden="true" x="{{ ПозицияЗначения }}" y="150" fill="#fff" transform="scale(.1)" textLength="{{ ШиринаТекстаЗначения }}">{{ Значение }}</text>
+            <text id="rlink" x="{{ ПозицияЗначения }}" y="140" transform="scale(.1)" textLength="{{ ШиринаТекстаЗначения }}">{{ Значение }}</text>
         </a>
     </g>
 </svg>

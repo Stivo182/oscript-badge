@@ -1,8 +1,9 @@
+// BSLLS:DuplicateStringLiteral-off
+
 #Использовать asserts
 #Использовать tempfiles
-#Использовать "../src/core"
+#Использовать "../src"
 
-&ПослеВсех
 Процедура ПослеЗапускаТестов() Экспорт
 	ВременныеФайлы.Удалить();
 КонецПроцедуры
@@ -13,6 +14,7 @@
 	Стили = Новый Массив();
 	Стили.Добавить(СтилиБейджей.Flat);
 	Стили.Добавить(СтилиБейджей.FlatSquare);
+	Стили.Добавить(СтилиБейджей.Plastic);
 	Стили.Добавить(СтилиБейджей.ForTheBadge);
 	Стили.Добавить(СтилиБейджей.Social);
 	Стили.Добавить(СтилиБейджей.GitlabScoped);
@@ -35,7 +37,8 @@
 			Бейдж.СохранитьВФайл(ПутьКФайлуТест);
 		
 			// Утверждение
-			ОжидаемЧтоФайлыСовпадают(ПутьКФайлуЭталон, ПутьКФайлуТест, ТестовыйСлучай.Значение);
+			Сообщение = СтрШаблон("Стиль: %1, имя: %2", ИмяСтиля, ТестовыйСлучай.Значение);
+			ОжидаемЧтоФайлыБейджейСовпадают(ПутьКФайлуЭталон, ПутьКФайлуТест, Сообщение);
 
 		КонецЦикла;
 
@@ -44,7 +47,7 @@
 КонецПроцедуры
 
 &Тест
-Процедура ТестДолжен_ИсключениеПриУстановкеКонфигурацииСНеподдерживаемымСтилем() Экспорт
+Процедура ТестДолжен_БроситьИсключениеПриУстановкеКонфигурацииСНеподдерживаемымСтилем() Экспорт
 	
 	// Подготовка
 	Конфигурация = Новый КонфигурацияБейджа();
@@ -60,7 +63,7 @@
 КонецПроцедуры
 
 &Тест
-Процедура ТестДолжен_ИсключениеПриУстановкеНесуществующегоЛоготипа() Экспорт
+Процедура ТестДолжен_БроситьИсключениеПриУстановкеНесуществующегоЛоготипа() Экспорт
 	
 	// Подготовка
 	Конфигурация = Новый КонфигурацияБейджа();
@@ -72,6 +75,40 @@
 	Ожидаем.Что(Бейдж)
 		.Метод("ПолучитьSVG")
 		.ВыбрасываетИсключение("Не найден логотип с именем unknown");
+
+КонецПроцедуры
+
+&Тест
+Процедура ТестДолжен_БроситьИсключениеКогдаНеЗаданСтильИМакет() Экспорт
+	
+	// Подготовка
+	Конфигурация = Новый КонфигурацияБейджа();
+	Конфигурация.Стиль = "";
+	Конфигурация.Макет = "";
+	Конфигурация.ТипКалькулятораГеометрии = Тип("БазовыйКалькуляторГеометрииБейджа");
+
+	Бейдж = Новый Бейдж(Конфигурация);
+
+	// Действие и Утверждение
+	Ожидаем.Что(Бейдж)
+		.Метод("ПолучитьSVG")
+		.ВыбрасываетИсключение("Не задан стиль бейджа или SVG-макет");
+
+КонецПроцедуры
+
+&Тест
+Процедура ТестДолжен_БроситьИсключениеКогдаНеТипКалькулятороаГеометри() Экспорт
+	
+	// Подготовка
+	Конфигурация = Новый КонфигурацияБейджа();
+	Конфигурация.Стиль = "";
+
+	Бейдж = Новый Бейдж(Конфигурация);
+
+	// Действие и Утверждение
+	Ожидаем.Что(Бейдж)
+		.Метод("ПолучитьSVG")
+		.ВыбрасываетИсключение("Не указан тип калькулятора геометрии бейджа");
 
 КонецПроцедуры
 
@@ -90,7 +127,7 @@
 	Бейдж.СохранитьВФайл(ПутьКФайлуТест);
 
 	// Утверждение
-	ОжидаемЧтоФайлыСовпадают(ПутьКФайлуЭталон, ПутьКФайлуТест);
+	ОжидаемЧтоФайлыБейджейСовпадают(ПутьКФайлуЭталон, ПутьКФайлуТест);
 
 КонецПроцедуры
 
@@ -140,6 +177,23 @@
 КонецПроцедуры
 
 &Тест
+Процедура ТестДолжен_ПроверитьКастомныйМакет() Экспорт
+	
+	// Подготовка
+	Конфигурация = Новый КонфигурацияБейджа("label");
+	Конфигурация.Макет = "<svg><text>{{ Заголовок }}</text></svg>";
+
+	Бейдж = Новый Бейдж(Конфигурация);
+
+	// Действие
+	Результат = Бейдж.ПолучитьSVG();
+	
+	// Утверждение
+	Ожидаем.Что(Результат).Содержит("<svg><text>label</text></svg>");
+
+КонецПроцедуры
+
+&Тест
 Процедура ТестДолжен_ПроверитьУстановкуЦветаЛоготипа() Экспорт
 	
 	// Подготовка
@@ -152,24 +206,21 @@
 
 	Бейдж = Новый Бейдж(Конфигурация);
 
-	РегулярноеВыражение = Новый РегулярноеВыражение("data:image/svg\+xml;base64,([A-Za-z0-9+/=]+)");
-
 	Для Каждого Логотип Из Логотипы Цикл
 
 		Конфигурация.Логотип = Логотип;
-		
+
 		// Действие
 		Результат = Бейдж.ПолучитьSVG();
 		
 		// Утверждение
-		Совпадения = РегулярноеВыражение.НайтиСовпадения(Результат);
-		Base64 = Совпадения[0].Группы[1].Значение;
+		Base64 = ИзвлечьBase64ИзSVG(Результат);
 		SVG = ПолучитьСтрокуИзДвоичныхДанных(Base64Значение(Base64));
 
 		Ожидаем.Что(SVG).Содержит("xmlns=""http://www.w3.org/2000/svg""><g fill=""red""><title>");
 		Ожидаем.Что(SVG).Содержит("</g></svg>");
 
-	КонецЦикла
+	КонецЦикла;
 
 КонецПроцедуры
 
@@ -291,25 +342,66 @@
 	
 КонецФункции
 
-Процедура ОжидаемЧтоФайлыСовпадают(Путь1, Путь2, Сообщение = "Файлы должны совпадать")
+Процедура ОжидаемЧтоФайлыБейджейСовпадают(Путь1, Путь2, Сообщение = "Файлы должны совпадать")
 
-	ЧтениеТекста = Новый ЧтениеТекста(Путь1);
+	ЧтениеТекста = Новый ЧтениеТекста(Путь1, КодировкаТекста.UTF8);
 	Текст1 = ЧтениеТекста.Прочитать();
 	ЧтениеТекста.Закрыть();
 	
-	ЧтениеТекста = Новый ЧтениеТекста(Путь2);
+	ЧтениеТекста = Новый ЧтениеТекста(Путь2, КодировкаТекста.UTF8);
 	Текст2 = ЧтениеТекста.Прочитать();
 	ЧтениеТекста.Закрыть();
 
-	Ожидаем.Что(Текст1, Сообщение).Равно(Текст2);
+	ДанныеБейджа1 = РазделитьБейдж(Текст1);
+	ДанныеБейджа2 = РазделитьБейдж(Текст2);
+
+	Ожидаем.Что(ДанныеБейджа1.БейджБезЛоготипа, Сообщение).Равно(ДанныеБейджа2.БейджБезЛоготипа);
+	Ожидаем.Что(ДанныеБейджа1.Логотип, Сообщение).Равно(ДанныеБейджа2.Логотип);
 
 КонецПроцедуры
+
+Функция РазделитьБейдж(SVG)
+
+	Base64 = ИзвлечьBase64ИзSVG(SVG);
+	Если ЗначениеЗаполнено(Base64) Тогда
+		Логотип = ПолучитьСтрокуИзДвоичныхДанных(Base64Значение(Base64));
+		БейджБезЛоготипа = СтрЗаменить(SVG, Base64, "");
+
+		Если Не СтрНайти(Логотип, Символы.ВК + Символы.ПС) Тогда
+			Логотип = СтрЗаменить(Логотип, Символы.ПС, Символы.ВК + Символы.ПС);
+		КонецЕсли;
+	Иначе
+		Логотип = Неопределено;
+		БейджБезЛоготипа = SVG;
+	КонецЕсли;
+
+	Результат = Новый Структура();
+	Результат.Вставить("Логотип", Логотип);
+	Результат.Вставить("БейджБезЛоготипа", БейджБезЛоготипа);
+
+	Возврат Результат;
+
+КонецФункции
+
+Функция ИзвлечьBase64ИзSVG(SVG)
+
+	РегулярноеВыражение = Новый РегулярноеВыражение("data:[^,]*;base64,([A-Za-z0-9+/=]+)");
+
+	Совпадения = РегулярноеВыражение.НайтиСовпадения(SVG);
+	Если Совпадения.Количество() = 0 Тогда
+		Возврат "";
+	КонецЕсли;
+
+	Возврат Совпадения[0].Группы[1].Значение;
+
+КонецФункции
 
 Процедура СформироватьЭталонныеФайлы()
 	
 	Стили = Новый Массив();
 	Стили.Добавить(СтилиБейджей.Flat);
 	Стили.Добавить(СтилиБейджей.FlatSquare);
+	Стили.Добавить(СтилиБейджей.Plastic);
 	Стили.Добавить(СтилиБейджей.ForTheBadge);
 	Стили.Добавить(СтилиБейджей.Social);
 	Стили.Добавить(СтилиБейджей.GitlabScoped);
@@ -350,5 +442,5 @@
 КонецФункции
 
 Функция ЛоготипGithubBase64()
-	Возврат "PHN2ZyBmaWxsPSJ3aGl0ZXNtb2tlIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0SHViPC90aXRsZT48cGF0aCBkPSJNMTIgLjI5N2MtNi42MyAwLTEyIDUuMzczLTEyIDEyIDAgNS4zMDMgMy40MzggOS44IDguMjA1IDExLjM4NS42LjExMy44Mi0uMjU4LjgyLS41NzcgMC0uMjg1LS4wMS0xLjA0LS4wMTUtMi4wNC0zLjMzOC43MjQtNC4wNDItMS42MS00LjA0Mi0xLjYxQzQuNDIyIDE4LjA3IDMuNjMzIDE3LjcgMy42MzMgMTcuN2MtMS4wODctLjc0NC4wODQtLjcyOS4wODQtLjcyOSAxLjIwNS4wODQgMS44MzggMS4yMzYgMS44MzggMS4yMzYgMS4wNyAxLjgzNSAyLjgwOSAxLjMwNSAzLjQ5NS45OTguMTA4LS43NzYuNDE3LTEuMzA1Ljc2LTEuNjA1LTIuNjY1LS4zLTUuNDY2LTEuMzMyLTUuNDY2LTUuOTMgMC0xLjMxLjQ2NS0yLjM4IDEuMjM1LTMuMjItLjEzNS0uMzAzLS41NC0xLjUyMy4xMDUtMy4xNzYgMCAwIDEuMDA1LS4zMjIgMy4zIDEuMjMuOTYtLjI2NyAxLjk4LS4zOTkgMy0uNDA1IDEuMDIuMDA2IDIuMDQuMTM4IDMgLjQwNSAyLjI4LTEuNTUyIDMuMjg1LTEuMjMgMy4yODUtMS4yMy42NDUgMS42NTMuMjQgMi44NzMuMTIgMy4xNzYuNzY1Ljg0IDEuMjMgMS45MSAxLjIzIDMuMjIgMCA0LjYxLTIuODA1IDUuNjI1LTUuNDc1IDUuOTIuNDIuMzYuODEgMS4wOTYuODEgMi4yMiAwIDEuNjA2LS4wMTUgMi44OTYtLjAxNSAzLjI4NiAwIC4zMTUuMjEuNjkuODI1LjU3QzIwLjU2NSAyMi4wOTIgMjQgMTcuNTkyIDI0IDEyLjI5N2MwLTYuNjI3LTUuMzczLTEyLTEyLTEyIi8+PC9zdmc+";
+	Возврат "PHN2ZyBmaWxsPSJ3aGl0ZXNtb2tlIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0SHViPC90aXRsZT48cGF0aCBkPSJNMTIgLjI5N2MtNi42MyAwLTEyIDUuMzczLTEyIDEyIDAgNS4zMDMgMy40MzggOS44IDguMjA1IDExLjM4NS42LjExMy44Mi0uMjU4LjgyLS41NzcgMC0uMjg1LS4wMS0xLjA0LS4wMTUtMi4wNC0zLjMzOC43MjQtNC4wNDItMS42MS00LjA0Mi0xLjYxQzQuNDIyIDE4LjA3IDMuNjMzIDE3LjcgMy42MzMgMTcuN2MtMS4wODctLjc0NC4wODQtLjcyOS4wODQtLjcyOSAxLjIwNS4wODQgMS44MzggMS4yMzYgMS44MzggMS4yMzYgMS4wNyAxLjgzNSAyLjgwOSAxLjMwNSAzLjQ5NS45OTguMTA4LS43NzYuNDE3LTEuMzA1Ljc2LTEuNjA1LTIuNjY1LS4zLTUuNDY2LTEuMzMyLTUuNDY2LTUuOTMgMC0xLjMxLjQ2NS0yLjM4IDEuMjM1LTMuMjItLjEzNS0uMzAzLS41NC0xLjUyMy4xMDUtMy4xNzYgMCAwIDEuMDA1LS4zMjIgMy4zIDEuMjMuOTYtLjI2NyAxLjk4LS4zOTkgMy0uNDA1IDEuMDIuMDA2IDIuMDQuMTM4IDMgLjQwNSAyLjI4LTEuNTUyIDMuMjg1LTEuMjMgMy4yODUtMS4yMy42NDUgMS42NTMuMjQgMi44NzMuMTIgMy4xNzYuNzY1Ljg0IDEuMjMgMS45MSAxLjIzIDMuMjIgMCA0LjYxLTIuODA1IDUuNjI1LTUuNDc1IDUuOTIuNDIuMzYuODEgMS4wOTYuODEgMi4yMiAwIDEuNjA2LS4wMTUgMi44OTYtLjAxNSAzLjI4NiAwIC4zMTUuMjEuNjkuODI1LjU3QzIwLjU2NSAyMi4wOTIgMjQgMTcuNTkyIDI0IDEyLjI5N2MwLTYuNjI3LTUuMzczLTEyLTEyLTEyIi8+PC9zdmc+"; // BSLLS:LineLength-off
 КонецФункции

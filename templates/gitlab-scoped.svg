@@ -14,9 +14,9 @@
         <rect fill="url(#b)" x="0" y="0" width="{{ Ширина }}" height="20"/>
     </g>
     <g fill="{{ ЦветТекстаЗаголовка }}" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="{{ РазмерШрифта }}">
-        <text x="{{ ПозицияЗаголовка }}" y="140" transform="scale(.1)" textLength="{{ ДлинаТекстаЗаголовка }}">{{ Заголовок }}</text>
+        <text x="{{ ПозицияЗаголовка }}" y="140" transform="scale(.1)" textLength="{{ ШиринаТекстаЗаголовка }}">{{ Заголовок }}</text>
     </g>
     <g fill="{{ ЦветТекстаЗначения }}" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="{{ РазмерШрифта }}">
-        <text x="{{ ПозицияЗначения - 10 }}" y="140" transform="scale(.1)" textLength="{{ ДлинаТекстаЗначения }}">{{ Значение }}</text>
+        <text x="{{ ПозицияЗначения - 10 }}" y="140" transform="scale(.1)" textLength="{{ ШиринаТекстаЗначения }}">{{ Значение }}</text>
     </g>
 </svg>

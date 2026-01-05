@@ -1,5 +1,5 @@
 ﻿<svg
-    xmlns="http://www.w3.org/2000/svg" width="210.5" height="20" aria-label="label: value">
+    xmlns="http://www.w3.org/2000/svg" width="200.5" height="20" aria-label="label: value">
     <title>label: value</title>
     <style>
         a:hover #llink{fill:url(#b);stroke:#ccc}
@@ -15,22 +15,22 @@
         <stop offset="1" stop-opacity=".1"/>
     </linearGradient>
     <g stroke="#d5d5d5">
-        <rect stroke="none" fill="#fcfcfc" x="0.5" y="0.5" width="78.0" height="19" rx="2"/>
-        <rect x="84.5" y="0.5" width="125.5" height="19" rx="2" fill="#fafafa"/>
-        <rect x="84.0" y="7.5" width="0.5" height="5" stroke="#fafafa"/>
-        <path d="M84.5 6.5 l-3 3v1 l3 3" fill="#fafafa"/>
+        <rect stroke="none" fill="#fcfcfc" x="0.5" y="0.5" width="74.0" height="19" rx="2"/>
+        <rect x="80.5" y="0.5" width="119.5" height="19" rx="2" fill="#fafafa"/>
+        <rect x="80.0" y="7.5" width="0.5" height="5" stroke="#fafafa"/>
+        <path d="M80.5 6.5 l-3 3v1 l3 3" fill="#fafafa"/>
     </g>
     <image x="5" y="3" width="14" height="14" href=""/>
     <g aria-hidden="false" fill="#333" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" text-rendering="geometricPrecision" font-weight="700" font-size="110" line-height="14px">
         <a target="_blank" href="">
-            <text aria-hidden="true" x="390" y="150" fill="#fff" transform="scale(.1)" textLength="580">label</text>
-            <text x="390" y="140" transform="scale(.1)" textLength="580">label</text>
-            <rect id="llink" stroke="#d5d5d5" fill="url(#a)" x=".5" y=".5" width="77.0" height="19" rx="2"/>
+            <text aria-hidden="true" x="370" y="150" fill="#fff" transform="scale(.1)" textLength="540">label</text>
+            <text x="370" y="140" transform="scale(.1)" textLength="540">label</text>
+            <rect id="llink" stroke="#d5d5d5" fill="url(#a)" x=".5" y=".5" width="73.0" height="19" rx="2"/>
         </a>
         <a target="_blank" href="">
-            <rect width="79.0" x="84.0" height="20" fill="rgba(0,0,0,0)"/>
-            <text aria-hidden="true" x="1470" y="150" fill="#fff" transform="scale(.1)" textLength="960">value</text>
-            <text id="rlink" x="1470" y="140" transform="scale(.1)" textLength="960">value</text>
+            <rect width="75.0" x="80.0" height="20" fill="rgba(0,0,0,0)"/>
+            <text aria-hidden="true" x="1400" y="150" fill="#fff" transform="scale(.1)" textLength="900">value</text>
+            <text id="rlink" x="1400" y="140" transform="scale(.1)" textLength="900">value</text>
         </a>
     </g>
 </svg>

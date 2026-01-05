@@ -1,0 +1,25 @@
+﻿<svg
+    xmlns="http://www.w3.org/2000/svg" width="194.0" height="18" role="img" aria-label="label: value">
+    <title>label: value</title>
+    <linearGradient id="s" x2="0" y2="100%">
+        <stop offset="0" stop-color="#fff" stop-opacity=".7"/>
+        <stop offset=".1" stop-color="#aaa" stop-opacity=".1"/>
+        <stop offset=".9" stop-color="#000" stop-opacity=".3"/>
+        <stop offset="1" stop-color="#000" stop-opacity=".5"/>
+    </linearGradient>
+    <clipPath id="r">
+        <rect width="194.0" height="18" rx="4" fill="#fff"/>
+    </clipPath>
+    <g clip-path="url(#r)">
+        <rect width="74.0" height="18" fill="#555"/>
+        <rect x="74.0" width="120.0" height="18" fill="#007ec6"/>
+        <rect width="194.0" height="18" fill="url(#s)"/>
+    </g>
+    <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
+        <image x="5" y="2" width="14" height="14" href=""/>
+        <text aria-hidden="true" x="370" y="140" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="540">label</text>
+        <text x="370" y="130" transform="scale(.1)" fill="#fff" textLength="540">label</text>
+        <text aria-hidden="true" x="1340" y="140" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="900">value</text>
+        <text x="1340" y="130" transform="scale(.1)" fill="#fff" textLength="900">value</text>
+    </g>
+</svg>

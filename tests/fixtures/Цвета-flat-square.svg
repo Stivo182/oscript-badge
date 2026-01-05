@@ -1,13 +1,13 @@
 ﻿<svg
-	xmlns="http://www.w3.org/2000/svg" width="81" height="20" role="img" aria-label="label: value">
+	xmlns="http://www.w3.org/2000/svg" width="77" height="20" role="img" aria-label="label: value">
 	<title>label: value</title>
 	<g shape-rendering="crispEdges">
-		<rect width="39" height="20" fill="yellow"/>
-		<rect x="39" width="42" height="20" fill="blue"/>
+		<rect width="37" height="20" fill="yellow"/>
+		<rect x="37" width="40" height="20" fill="blue"/>
 	</g>
 	<g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="110">
 		<image x="5" y="3" width="14" height="14" href=""/>
-		<text x="195" y="140" transform="scale(.1)" fill="red" textLength="290">label</text>
-		<text x="600" y="140" transform="scale(.1)" fill="yellow" textLength="320">value</text>
+		<text x="185" y="140" transform="scale(.1)" fill="red" textLength="270">label</text>
+		<text x="570" y="140" transform="scale(.1)" fill="yellow" textLength="300">value</text>
 	</g>
 </svg>
