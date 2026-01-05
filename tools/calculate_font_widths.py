@@ -57,8 +57,6 @@ sorted_coeffs = sorted(coeff_groups.keys(), reverse=True)
 print("КоэффициентыШириныСимволов = Новый Соответствие();")
 for coeff in sorted_coeffs:
     chars_str = ''.join(coeff_groups[coeff])
-    # Заменяем пробел на читаемое представление
-    chars_str = chars_str.replace(' ', ' ')
     # Экранируем кавычки
     chars_str = chars_str.replace('"', '""')
     print(f'КоэффициентыШириныСимволов.Вставить("{chars_str}", {coeff});')
