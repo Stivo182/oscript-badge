@@ -1,5 +1,8 @@
 # badge
 
+[![Release](https://img.shields.io/github/release/Stivo182/oscript-badge.svg)](https://github.com/Stivo182/oscript-badge/releases)
+[![Тестирование](https://github.com/stivo182/oscript-badge/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/stivo182/oscript-badge/actions/workflows/test.yml)
+
 Библиотека на OneScript, предназначенная для генерации SVG-бейджей различных стилей с отображением статусов, версий, метрик и другой информации.
 
 ## Поддерживаемые стили
