@@ -2,6 +2,7 @@
 
 [![Release](https://img.shields.io/github/release/Stivo182/oscript-badge.svg)](https://github.com/Stivo182/oscript-badge/releases)
 [![Тестирование](https://github.com/stivo182/oscript-badge/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/stivo182/oscript-badge/actions/workflows/test.yml)
+[![Used by](https://litrosbadges.ru/package/badge.svg)](https://litrosbadges.ru/package/badge)
 
 Библиотека на OneScript, предназначенная для генерации SVG-бейджей различных стилей с отображением статусов, версий, метрик и другой информации.
 
